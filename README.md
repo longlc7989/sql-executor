@@ -1,3 +1,4 @@
+```
 src/main/java/com/example/sqlexecutor/
 ├── SqlExecutorApplication.java
 ├── controller/
@@ -18,7 +19,8 @@ src/main/java/com/example/sqlexecutor/
 │   └── ConfirmationValidator.java
 └── config/
     └── SqlLogger.java
-
+```
+```
 src/
 ├── app/
 │   ├── app.component.ts
@@ -43,16 +45,21 @@ src/
 ├── assets/
 ├── environments/
 └── index.html
-
+```
 
 
 Hướng dẫn chạy ứng dụng
+
+```
 Chạy Backend
 bash# Cấu hình cơ sở dữ liệu trong application.properties trước khi chạy
 cd sql-executor-backend
 ./mvnw spring-boot:run
+
 Chạy Frontend
 bashcd sql-executor-frontend
 npm install
 ng serve
+```
+
 Truy cập ứng dụng tại: http://localhost:4200
