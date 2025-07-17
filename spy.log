@@ -1,0 +1,733 @@
+#2025-07-16 20:01:09 | took 18ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from cluster_metadata) AS count_query
+SELECT COUNT(*) FROM (select * from cluster_metadata) AS count_query;
+#2025-07-16 20:01:09 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from cluster_metadata LIMIT 10 OFFSET 0
+select * from cluster_metadata LIMIT 10 OFFSET 0;
+#2025-07-16 20:01:09 | took 3ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:01:53 | took 34ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+INSERT INTO cluster_metadata (metadata_partition, data, data_encoding, version) VALUES (100, 'Sample data', 'Sample data_encoding', 100);
+INSERT INTO cluster_metadata (metadata_partition, data, data_encoding, version) VALUES (100, 'Sample data', 'Sample data_encoding', 100);;
+#2025-07-16 20:01:53 | took 2ms | rollback | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:02:33 | took 20ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from queue) AS count_query
+SELECT COUNT(*) FROM (select * from queue) AS count_query;
+#2025-07-16 20:02:33 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from queue LIMIT 10 OFFSET 0
+select * from queue LIMIT 10 OFFSET 0;
+#2025-07-16 20:02:33 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:02:40 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+INSERT INTO queue (queue_type, message_id, message_payload, message_encoding) VALUES (100, 1, 'Sample message_payload', 'Sample message_encoding');
+INSERT INTO queue (queue_type, message_id, message_payload, message_encoding) VALUES (100, 1, 'Sample message_payload', 'Sample message_encoding');;
+#2025-07-16 20:02:40 | took 1ms | rollback | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:02:58 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from queue) AS count_query
+SELECT COUNT(*) FROM (select * from queue) AS count_query;
+#2025-07-16 20:02:58 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from queue LIMIT 10 OFFSET 0
+select * from queue LIMIT 10 OFFSET 0;
+#2025-07-16 20:02:58 | took 2ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:03:42 | took 10ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from queue_metadata) AS count_query
+SELECT COUNT(*) FROM (select * from queue_metadata) AS count_query;
+#2025-07-16 20:03:42 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from queue_metadata LIMIT 10 OFFSET 0
+select * from queue_metadata LIMIT 10 OFFSET 0;
+#2025-07-16 20:03:42 | took 2ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:04:01 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+INSERT INTO queue_metadata (queue_type, data, data_encoding, version) VALUES (2, 'Sample data', 'Proto3', 0);
+INSERT INTO queue_metadata (queue_type, data, data_encoding, version) VALUES (2, 'Sample data', 'Proto3', 0);;
+#2025-07-16 20:04:01 | took 4ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:04:15 | took 7ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from queue_metadata) AS count_query
+SELECT COUNT(*) FROM (select * from queue_metadata) AS count_query;
+#2025-07-16 20:04:15 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from queue_metadata LIMIT 10 OFFSET 0
+select * from queue_metadata LIMIT 10 OFFSET 0;
+#2025-07-16 20:04:15 | took 2ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:04:45 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+delete queue_metadata
+where queue_type = 2
+delete queue_metadata
+where queue_type = 2;
+#2025-07-16 20:04:45 | took 1ms | rollback | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:05:07 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+delete from queue_metadata
+where queue_type = 2
+delete from queue_metadata
+where queue_type = 2;
+#2025-07-16 20:05:07 | took 7ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:05:21 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from queue_metadata) AS count_query
+SELECT COUNT(*) FROM (select * from queue_metadata) AS count_query;
+#2025-07-16 20:05:21 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from queue_metadata LIMIT 10 OFFSET 0
+select * from queue_metadata LIMIT 10 OFFSET 0;
+#2025-07-16 20:05:21 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:06:41 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select queue_type from queue_metadata) AS count_query
+SELECT COUNT(*) FROM (select queue_type from queue_metadata) AS count_query;
+#2025-07-16 20:06:41 | took 7ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select queue_type from queue_metadata LIMIT 10 OFFSET 0
+select queue_type from queue_metadata LIMIT 10 OFFSET 0;
+#2025-07-16 20:06:41 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:16:32 | took 16ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from history_node) AS count_query
+SELECT COUNT(*) FROM (select * from history_node) AS count_query;
+#2025-07-16 20:16:32 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from history_node LIMIT 10 OFFSET 0
+select * from history_node LIMIT 10 OFFSET 0;
+#2025-07-16 20:16:32 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:16:40 | took 17ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from history_node
+select * from history_node;
+#2025-07-16 20:21:25 | took 158ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select tree_id from history_node) AS count_query
+SELECT COUNT(*) FROM (select tree_id from history_node) AS count_query;
+#2025-07-16 20:21:25 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select tree_id from history_node LIMIT 10 OFFSET 0
+select tree_id from history_node LIMIT 10 OFFSET 0;
+#2025-07-16 20:21:25 | took 3ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:21:28 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select tree_id from history_node
+select tree_id from history_node;
+#2025-07-16 20:31:21 | took 14ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from queue) AS count_query
+SELECT COUNT(*) FROM (select * from queue) AS count_query;
+#2025-07-16 20:31:21 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from queue LIMIT 10 OFFSET 0
+select * from queue LIMIT 10 OFFSET 0;
+#2025-07-16 20:31:21 | took 2ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:38:06 | took 45ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM namespace) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM namespace) AS count_query;
+#2025-07-16 20:38:06 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(1) FROM (SELECT * FROM namespace) AS count_query
+SELECT COUNT(1) FROM (SELECT * FROM namespace) AS count_query;
+#2025-07-16 20:38:06 | took 1ms | rollback | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:38:31 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM queue) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM queue) AS count_query;
+#2025-07-16 20:38:31 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM queue LIMIT 10 OFFSET 0
+SELECT * FROM queue LIMIT 10 OFFSET 0;
+#2025-07-16 20:38:31 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:45:03 | took 8ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from queue) AS count_query
+SELECT COUNT(*) FROM (select * from queue) AS count_query;
+#2025-07-16 20:45:03 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from queue LIMIT 10 OFFSET 0
+select * from queue LIMIT 10 OFFSET 0;
+#2025-07-16 20:45:03 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:46:57 | took 39ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:46:57 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:46:58 | took 7ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:47:01 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:47:04 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:47:06 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:47:06 | took 7ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:47:08 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from queue) AS count_query
+SELECT COUNT(*) FROM (select * from queue) AS count_query;
+#2025-07-16 20:47:08 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from queue LIMIT 10 OFFSET 0
+select * from queue LIMIT 10 OFFSET 0;
+#2025-07-16 20:47:08 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:47:32 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:47:35 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:47:43 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:02 | took 14ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:06 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:07 | took 7ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:11 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:13 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:20 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:24 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:28 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:31 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:32 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:38 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from queue) AS count_query
+SELECT COUNT(*) FROM (SELECT * from queue) AS count_query;
+#2025-07-16 20:49:38 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from queue LIMIT 10 OFFSET 0
+SELECT * from queue LIMIT 10 OFFSET 0;
+#2025-07-16 20:49:38 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:49:48 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:56 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:49:57 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:50:02 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:50:03 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:50:07 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_immediate_tasks) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_immediate_tasks) AS count_query;
+#2025-07-16 20:50:07 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_immediate_tasks LIMIT 10 OFFSET 0
+SELECT * FROM history_immediate_tasks LIMIT 10 OFFSET 0;
+#2025-07-16 20:50:07 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:53:49 | took 18ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:53:50 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:53:51 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:53:56 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:54:00 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:54:06 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:54:07 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:54:13 | took 11ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query;
+#2025-07-16 20:54:13 | took 8ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_node LIMIT 10 OFFSET 0
+SELECT * FROM history_node LIMIT 10 OFFSET 0;
+#2025-07-16 20:54:13 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:54:23 | took 7ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query;
+#2025-07-16 20:54:23 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_node LIMIT 10 OFFSET 10
+SELECT * FROM history_node LIMIT 10 OFFSET 10;
+#2025-07-16 20:54:23 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:54:26 | took 7ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query;
+#2025-07-16 20:54:26 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_node LIMIT 10 OFFSET 20
+SELECT * FROM history_node LIMIT 10 OFFSET 20;
+#2025-07-16 20:54:26 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:56:58 | took 15ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:56:59 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:57:02 | took 7ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:57:04 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:57:05 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 20:57:09 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query;
+#2025-07-16 20:57:09 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_node LIMIT 10 OFFSET 0
+SELECT * FROM history_node LIMIT 10 OFFSET 0;
+#2025-07-16 20:57:10 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:57:15 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query;
+#2025-07-16 20:57:15 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_node LIMIT 10 OFFSET 10
+SELECT * FROM history_node LIMIT 10 OFFSET 10;
+#2025-07-16 20:57:15 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:57:19 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query;
+#2025-07-16 20:57:19 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_node LIMIT 10 OFFSET 20
+SELECT * FROM history_node LIMIT 10 OFFSET 20;
+#2025-07-16 20:57:19 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 20:59:07 | took 8ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_node) AS count_query;
+#2025-07-16 20:59:07 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_node LIMIT 50 OFFSET 0
+SELECT * FROM history_node LIMIT 50 OFFSET 0;
+#2025-07-16 20:59:07 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:00:03 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:00:07 | took 7ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:00:08 | took 9ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:00:24 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:00:27 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:00:28 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:00:33 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from history_immediate_tasks) AS count_query
+SELECT COUNT(*) FROM (SELECT * from history_immediate_tasks) AS count_query;
+#2025-07-16 21:00:33 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from history_immediate_tasks LIMIT 10 OFFSET 0
+SELECT * from history_immediate_tasks LIMIT 10 OFFSET 0;
+#2025-07-16 21:00:33 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:11:20 | took 10ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:11:21 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:11:24 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:11:25 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:11:29 | took 12ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from cluster_membership) AS count_query
+SELECT COUNT(*) FROM (SELECT * from cluster_membership) AS count_query;
+#2025-07-16 21:11:29 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from cluster_membership LIMIT 10 OFFSET 0
+SELECT * from cluster_membership LIMIT 10 OFFSET 0;
+#2025-07-16 21:11:29 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:11:35 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from cluster_membership) AS count_query
+SELECT COUNT(*) FROM (SELECT * from cluster_membership) AS count_query;
+#2025-07-16 21:11:35 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from cluster_membership LIMIT 10 OFFSET 10
+SELECT * from cluster_membership LIMIT 10 OFFSET 10;
+#2025-07-16 21:11:35 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:11:37 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from cluster_membership) AS count_query
+SELECT COUNT(*) FROM (SELECT * from cluster_membership) AS count_query;
+#2025-07-16 21:11:37 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from cluster_membership LIMIT 10 OFFSET 0
+SELECT * from cluster_membership LIMIT 10 OFFSET 0;
+#2025-07-16 21:11:37 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:11:39 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from cluster_membership) AS count_query
+SELECT COUNT(*) FROM (SELECT * from cluster_membership) AS count_query;
+#2025-07-16 21:11:39 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from cluster_membership LIMIT 10 OFFSET 10
+SELECT * from cluster_membership LIMIT 10 OFFSET 10;
+#2025-07-16 21:11:39 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:11:45 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:11:46 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:11:50 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from history_scheduled_tasks) AS count_query
+SELECT COUNT(*) FROM (SELECT * from history_scheduled_tasks) AS count_query;
+#2025-07-16 21:11:50 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from history_scheduled_tasks LIMIT 10 OFFSET 0
+SELECT * from history_scheduled_tasks LIMIT 10 OFFSET 0;
+#2025-07-16 21:11:50 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:11:55 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-16 21:11:58 | took 13ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query;
+#2025-07-16 21:11:58 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from history_tree LIMIT 10 OFFSET 0
+SELECT * from history_tree LIMIT 10 OFFSET 0;
+#2025-07-16 21:11:58 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:12:02 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query;
+#2025-07-16 21:12:02 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from history_tree LIMIT 10 OFFSET 10
+SELECT * from history_tree LIMIT 10 OFFSET 10;
+#2025-07-16 21:12:02 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:12:03 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query;
+#2025-07-16 21:12:03 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from history_tree LIMIT 10 OFFSET 20
+SELECT * from history_tree LIMIT 10 OFFSET 20;
+#2025-07-16 21:12:03 | took 2ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:12:04 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query;
+#2025-07-16 21:12:04 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from history_tree LIMIT 10 OFFSET 40
+SELECT * from history_tree LIMIT 10 OFFSET 40;
+#2025-07-16 21:12:04 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:12:04 | took 7ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query;
+#2025-07-16 21:12:04 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from history_tree LIMIT 10 OFFSET 120
+SELECT * from history_tree LIMIT 10 OFFSET 120;
+#2025-07-16 21:12:04 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:12:07 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query;
+#2025-07-16 21:12:07 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from history_tree LIMIT 20 OFFSET 0
+SELECT * from history_tree LIMIT 20 OFFSET 0;
+#2025-07-16 21:12:07 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-16 21:12:09 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * from history_tree) AS count_query;
+#2025-07-16 21:12:09 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * from history_tree LIMIT 20 OFFSET 20
+SELECT * from history_tree LIMIT 20 OFFSET 20;
+#2025-07-16 21:12:09 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:36:04 | took 13ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:36:05 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:36:08 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:36:11 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:36:18 | took 11ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query;
+#2025-07-17 07:36:18 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_tree LIMIT 10 OFFSET 0
+SELECT * FROM history_tree LIMIT 10 OFFSET 0;
+#2025-07-17 07:36:18 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:36:20 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query;
+#2025-07-17 07:36:20 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_tree LIMIT 10 OFFSET 10
+SELECT * FROM history_tree LIMIT 10 OFFSET 10;
+#2025-07-17 07:36:20 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:36:21 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query;
+#2025-07-17 07:36:21 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_tree LIMIT 10 OFFSET 20
+SELECT * FROM history_tree LIMIT 10 OFFSET 20;
+#2025-07-17 07:36:21 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:36:23 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query;
+#2025-07-17 07:36:23 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_tree LIMIT 20 OFFSET 0
+SELECT * FROM history_tree LIMIT 20 OFFSET 0;
+#2025-07-17 07:36:23 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:36:26 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query;
+#2025-07-17 07:36:26 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_tree LIMIT 100 OFFSET 0
+SELECT * FROM history_tree LIMIT 100 OFFSET 0;
+#2025-07-17 07:36:26 | took 2ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:36:34 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query;
+#2025-07-17 07:36:34 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_tree LIMIT 5 OFFSET 0
+SELECT * FROM history_tree LIMIT 5 OFFSET 0;
+#2025-07-17 07:36:34 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:36:35 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query;
+#2025-07-17 07:36:35 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_tree LIMIT 5 OFFSET 5
+SELECT * FROM history_tree LIMIT 5 OFFSET 5;
+#2025-07-17 07:36:35 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:36:36 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query;
+#2025-07-17 07:36:36 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_tree LIMIT 5 OFFSET 10
+SELECT * FROM history_tree LIMIT 5 OFFSET 10;
+#2025-07-17 07:36:36 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:36:37 | took 7ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM history_tree) AS count_query;
+#2025-07-17 07:36:37 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM history_tree LIMIT 5 OFFSET 15
+SELECT * FROM history_tree LIMIT 5 OFFSET 15;
+#2025-07-17 07:36:37 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:36:45 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:36:47 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:36:52 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:36:57 | took 8ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from build_id_to_task_queue) AS count_query
+SELECT COUNT(*) FROM (select * from build_id_to_task_queue) AS count_query;
+#2025-07-17 07:36:57 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from build_id_to_task_queue LIMIT 10 OFFSET 0
+select * from build_id_to_task_queue LIMIT 10 OFFSET 0;
+#2025-07-17 07:36:57 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:37:03 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:37:04 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:37:09 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:37:18 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:37:24 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:37:25 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:37:30 | took 9ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query;
+#2025-07-17 07:37:30 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from task_queues LIMIT 10 OFFSET 0
+select * from task_queues LIMIT 10 OFFSET 0;
+#2025-07-17 07:37:30 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:37:34 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query;
+#2025-07-17 07:37:34 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from task_queues LIMIT 10 OFFSET 10
+select * from task_queues LIMIT 10 OFFSET 10;
+#2025-07-17 07:37:34 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:37:34 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query;
+#2025-07-17 07:37:34 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from task_queues LIMIT 10 OFFSET 20
+select * from task_queues LIMIT 10 OFFSET 20;
+#2025-07-17 07:37:34 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:37:41 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query;
+#2025-07-17 07:37:41 | took 0ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from task_queues LIMIT 5 OFFSET 0
+select * from task_queues LIMIT 5 OFFSET 0;
+#2025-07-17 07:37:41 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:37:45 | took 4ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query;
+#2025-07-17 07:38:05 | took 2ms | rollback | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:38:18 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query;
+#2025-07-17 07:38:38 | took 2ms | rollback | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:39:27 | took 2ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query;
+#2025-07-17 07:39:47 | took 2ms | rollback | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:43:35 | took 1ms | rollback | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:47:58 | took 22ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query
+SELECT COUNT(*) FROM (select * from task_queues) AS count_query;
+#2025-07-17 07:47:58 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+select * from task_queues LIMIT 5 OFFSET 0
+select * from task_queues LIMIT 5 OFFSET 0;
+#2025-07-17 07:47:58 | took 1ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
+#2025-07-17 07:49:45 | took 9ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:49:48 | took 3ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:49:51 | took 6ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:50:09 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:50:10 | took 5ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SHOW TABLES
+SHOW TABLES;
+#2025-07-17 07:50:19 | took 15ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT COUNT(*) FROM (SELECT * FROM queue) AS count_query
+SELECT COUNT(*) FROM (SELECT * FROM queue) AS count_query;
+#2025-07-17 07:50:19 | took 1ms | statement | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+SELECT * FROM queue LIMIT 5 OFFSET 0
+SELECT * FROM queue LIMIT 5 OFFSET 0;
+#2025-07-17 07:50:19 | took 0ms | commit | connection 0| url jdbc:p6spy:mysql://localhost:3306/temporal
+
+;
